@@ -12,9 +12,9 @@ public class Roman {
 		RomanNum C = new RomanNum('C',  100, X);
 		RomanNum D = new RomanNum('D',  500, C);
 		RomanNum M = new RomanNum('M', 1000, C);
-		RomanNumbers = new RomanNum[] { I, V, X, L, C, D, M };
-		
+		RomanNumbers = new RomanNum[] { I, V, X, L, C, D, M };	
 	}
+	
 	
 	public static int toInteger (String strRoman) {
 		int dec = 0;
