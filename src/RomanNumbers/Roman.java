@@ -13,6 +13,7 @@ public class Roman {
 		RomanNum D = new RomanNum('D',  500, C);
 		RomanNum M = new RomanNum('M', 1000, C);
 		RomanNumbers = new RomanNum[] { I, V, X, L, C, D, M };
+		
 	}
 	
 	public static int toInteger (String strRoman) {
