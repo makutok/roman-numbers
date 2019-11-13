@@ -1,8 +1,8 @@
-Roman Numbers - java
+Roman Numbers - Java
 ====================
-Simple extensible java class to create roman number literals from decimal integers and vice versa.
+Simple java class to create roman number literals from decimal integers and vice versa.
 
-Two simple static methods:
+Two static methods:
 
 ```java
 import RomanNumbers.Roman;
@@ -20,7 +20,6 @@ MCMXVII
 
 License
 -------
-```
 MIT License
 
 Copyright © 2019 Miguel Bautista Pérez
@@ -42,4 +41,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```

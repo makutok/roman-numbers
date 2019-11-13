@@ -1,19 +1,21 @@
 package RomanNumbers;
 
 public class Roman {
-
-	static RomanNum I = new RomanNum('I',    1, null);
-	static RomanNum V = new RomanNum('V',    5, I);
-	static RomanNum X = new RomanNum('X',   10, I);
-	static RomanNum L = new RomanNum('L',   50, X);
-	static RomanNum C = new RomanNum('C',  100, X);
-	static RomanNum D = new RomanNum('D',  500, C);
-	static RomanNum M = new RomanNum('M', 1000, C);
-
-	static RomanNum[] RomanNumbers = { I, V, X, L, C, D, M };
-
 	
-	public static int romanToDec (String strRoman) {
+	private static RomanNum[] RomanNumbers;
+	
+	static {
+		RomanNum I = new RomanNum('I',    1, null);
+		RomanNum V = new RomanNum('V',    5, I);
+		RomanNum X = new RomanNum('X',   10, I);
+		RomanNum L = new RomanNum('L',   50, X);
+		RomanNum C = new RomanNum('C',  100, X);
+		RomanNum D = new RomanNum('D',  500, C);
+		RomanNum M = new RomanNum('M', 1000, C);
+		RomanNumbers = new RomanNum[] { I, V, X, L, C, D, M };
+	}
+	
+	public static int toInteger (String strRoman) {
 		int dec = 0;
 		RomanNum Roman = null;
 
@@ -38,24 +40,24 @@ public class Roman {
 	}
 
 	
-	public static String decToRoman (int dec) {
+	public static String toRoman (int decimal) {
 		String strRoman = "";
 		RomanNum Roman = null;
 
-		while (dec > 0) {
+		while (decimal > 0) {
 			for (int r = RomanNumbers.length - 1; r >= 0; r--) {
 				Roman = RomanNumbers[r];
 				
-				if (dec >= Roman.getVal())
+				if (decimal >= Roman.getVal())
 				{
-					dec -= Roman.getVal();
+					decimal -= Roman.getVal();
 					strRoman = strRoman + Roman.getLetter();
 					break;
 				}
-				else if (dec + Roman.getNext().getVal() >= Roman.getVal())
+				else if (decimal + Roman.getNext().getVal() >= Roman.getVal())
 				{
 					Roman = Roman.getNext();
-					dec += Roman.getVal();
+					decimal += Roman.getVal();
 					strRoman = strRoman + Roman.getLetter();
 					break;
 				}
